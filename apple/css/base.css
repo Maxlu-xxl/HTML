@@ -1,0 +1,20 @@
+/* 清除默认边距 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 去掉列表前面的点点 */
+
+ul li {
+    list-style: none;
+}
+
+
+/* 清除连接的蓝色下划线 */
+
+a {
+    text-decoration: none;
+}

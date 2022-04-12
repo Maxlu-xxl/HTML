@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.phone {
+    width: 100%;
+    height: 600px;
+}
+
+.phone .bg {
+    width: 100%;
+    height: 600px;
+    display: block;
+    background-image: url(../images/iphone_1202.jpg);
+    background-repeat: no-repeat;
+    background-size: 2200px 600px;
+    background-position: center top;
+    /* background-color: pink; */
+    text-align: center;
+    /* iphone12的字下调，且不撑开盒子 */
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+.phone .bg .one {
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    color: black;
+}
+
+.phone .bg .two {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+}
+
+.phone .bg .three {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    color: gray;
+}
+
+.phone .bg .four {
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+    background-color: pink;
+    color: #06c;
+    text-align: center;
+    font-size: 18px;
+}

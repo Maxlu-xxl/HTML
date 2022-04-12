@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 这个必须要用 */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 480px;
+            height: 104px;
+            /* background-color: gray; */
+            border: 1px solid green;
+            margin: 50px auto;
+            /* 实现box里面的ul flex布局排列 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* box-sizing: border-box; */
+        }
+        
+        ul {
+            width: 480px;
+            height: 100px;
+            /* 实现ul 里面的li 在一行显示 */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        ul li {
+            width: 120px;
+            height: 100px;
+            list-style: none;
+        }
+        
+        ul li img {
+            width: 120px;
+            height: 100px;
+        }
+        
+        body {
+            background-image: url(images/1.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/2.jpg" alt=""></li>
+            <li><img src="images/3.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+        </ul>
+
+    </div>
+
+    <script>
+        var imgs = document.getElementsByTagName('img')
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onmouseover = function() {
+                document.body.style.backgroundImage = 'url(' + this.src + ')'
+            }
+        }
+
+
+
+
+        // 错误
+        // for (var i = 0; i < imgs.length; i++) {
+        //     if (imgs[i].onmouseover) {
+        //         imgs[i].onmouseover = function() {
+        //             document.body.style.backgroundImage = 'url(' + this.src + ')'
+        //         }
+        //     } else if (imgs[i].ontouchmove) {
+        //         img[i].ontouchmove = function() {
+        //             document.body.style.backgroundImage = null
+        //         }
+        //     }
+        // }
+    </script>
+
+
+</body>
+
+</html>

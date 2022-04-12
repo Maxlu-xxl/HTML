@@ -1,0 +1,49 @@
+.l_phone_pro .bg {
+    width: 100%;
+    height: 640px;
+    display: block;
+    background-image: url(../images/iphone_12_pro.jpg);
+    background-repeat: no-repeat;
+    background-size: 2200px 640px;
+    background-position: center top;
+    /* background-color: pink; */
+    text-align: center;
+    /* iphone12的字下调，且不撑开盒子 */
+    box-sizing: border-box;
+    padding-top: 30px;
+    margin-top: 15px;
+}
+
+.l_phone_pro .bg .one {
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    color: white;
+}
+
+.l_phone_pro .bg .two {
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+}
+
+.l_phone_pro .bg .three {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+    color: gray;
+}
+
+.l_phone_pro .bg .four {
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+    /* background-color: pink; */
+    color: #06c;
+    text-align: center;
+    font-size: 18px;
+}

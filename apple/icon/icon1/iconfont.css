@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1627281847674') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-peijian:before {
+  content: "\e690";
+}
+
+.icon-watch_nav_watch_os_l:before {
+  content: "\e50b";
+}
+
+.icon-apple:before {
+  content: "\e57b";
+}
+
+.icon-AppleWatchEdition:before {
+  content: "\e733";
+}
+
+.icon-AppleWatchSeries:before {
+  content: "\e734";
+}
+
+.icon-AppleWatchNike:before {
+  content: "\e735";
+}
+
+.icon-sousuo:before {
+  content: "\e623";
+}
+
+.icon-bijiao:before {
+  content: "\e70c";
+}
+
+.icon-weidianicon-:before {
+  content: "\e616";
+}
+
+.icon-AppleWatchHerms:before {
+  content: "\e60f";
+}
+
+.icon-AppleWatchdingzhifang:before {
+  content: "\e610";
+}
+
+.icon-biaodai:before {
+  content: "\e611";
+}
+
+.icon-AppleWatchSeries6:before {
+  content: "\e612";
+}
+
+.icon-Airpods:before {
+  content: "\e8f7";
+}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log(getRandomInt(0, 255))
+
+        // console.log(rgb(0, 255, 234))
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+
+        }
+
+        function getRGB(min, max) {
+            // 用0-255之间生成随机数c1,c2,c3
+            // rgb(c1,c2,c3)即一个随机颜色
+            var c1 = getRandomInt(min, max)
+            var c2 = getRandomInt(min, max)
+            var c3 = getRandomInt(min, max)
+            return 'rgb(' + c1 + ',' + c2 + ',' + c3 + ')'
+        }
+
+        var color = getRGB(0, 255)
+        console.log(color)
+
+        document.body.style.backgroundColor = color
+    </script>
+
+</body>
+
+</html>

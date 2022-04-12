@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = [90, 80, 85, 75, 60, 'zs', 'lisi', true, undefined, null]
+            // arr1[0] = 'wangwu'
+            // arr1[10] = '110'
+            // console.log(arr1)
+            // 遍历数组
+            // for (var i = 0; i < arr1.length; i++) {
+            //     console.log(arr1[i])
+            // }
+
+        var arr = [21, 45, 66, 98, 123, 30, 200]
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+            // 求数组最大值
+            var m = 0;
+            if (arr[m] < arr[i]) {
+                m = i
+            }
+            // 求数组最小值
+            var n = 0;
+            if (arr[n] > arr[i]) {
+                n = i
+            }
+            // 求和
+            sum += arr[i];
+
+        }
+
+        console.log('数组和为：' + sum)
+        console.log('数组平均值为：' + sum / arr.length)
+        console.log('数组最大值为:' + arr[m])
+        console.log('数组最小值为：' + arr[n])
+    </script>
+</body>
+
+</html>

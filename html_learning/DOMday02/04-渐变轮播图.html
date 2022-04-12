@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        *::selection {
+            background: none;
+        }
+        
+        ul li,
+        ol li {
+            list-style: none;
+        }
+        
+        #box {
+            width: 800px;
+            height: 500px;
+            border: 1px solid #000;
+            opacity: 1;
+            margin: 50px auto;
+            position: relative;
+        }
+        
+        #imgBox li {
+            width: 800px;
+            height: 500px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            opacity: 0;
+            transition: all .8s;
+        }
+        
+        #imgBox li:first-child {
+            opacity: 1;
+        }
+        
+        #left,
+        #right {
+            width: 54px;
+            height: 36px;
+            background-color: aqua;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            line-height: 36px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        #right {
+            right: 0;
+        }
+        /* 选择性添加代码 */
+        
+        #left:hover,
+        #right:hover {
+            background-color: pink;
+        }
+        
+        #left:active,
+        #right:active {
+            background-color: purple;
+        }
+        /* 新增代码结束 */
+        
+        #circle li {
+            width: 30px;
+            height: 20px;
+            border: 1px solid #000;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            /* background-color: tomato; */
+        }
+        
+        #circle {
+            width: 160px;
+            height: 25px;
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+        }
+        
+        .current {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <ul id="imgBox">
+            <li><img src="images/f1.jpg" alt=""></li>
+            <li><img src="images/f2.jpg" alt=""></li>
+            <li><img src="images/f3.jpg" alt=""></li>
+            <li><img src="images/f4.jpg" alt=""></li>
+        </ul>
+        <div id="left">left</div>
+        <div id="right">right</div>
+        <ol id="circle">
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </div>
+
+    <script>
+        // 为社么要获取id
+        function $(id) {
+            return document.getElementById(id)
+        }
+
+        var lis = $('imgBox').getElementsByTagName('li')
+            // var lis = 'imgBox'.getElementsByTagName('li')
+            // console.log(lis)
+
+        var biaodian = $('circle').getElementsByTagName('li')
+            // console.log(biaodian)
+        var index = 0
+        $('right').onclick = function() {
+            lis[index].style.opacity = 0
+            biaodian[index].className = ''
+            index++
+            if (index === 4) {
+                index = 0
+            }
+            lis[index].style.opacity = 1
+            biaodian[index].className = 'current'
+        }
+
+        $('left').onclick = function() {
+            lis[index].style.opacity = 0
+            biaodian[index].className = ''
+            index--
+            if (index === -1) {
+                index = 3
+            }
+            lis[index].style.opacity = 1
+            biaodian[index].className = 'current'
+        }
+
+        // 让ol li 中的1,2,3,4与图片0,1,2,3一一对应
+        for (var i = 0; i < biaodian.length; i++) {
+            biaodian[i].setAttribute('index', i)
+            biaodian[i].onclick = foo
+        }
+
+        function foo() {
+            var liIndex = parseInt(this.getAttribute('index'))
+            index = liIndex
+            for (var i = 0; i < biaodian.length; i++) {
+                biaodian[i].className = ''
+                lis[i].style.opacity = 0
+            }
+            this.className = 'current'
+            lis[index].style.opacity = 1
+        }
+
+        // 实现自动播放
+        var timerId = setInterval(function() {
+                $('right').click()
+            }, 2000)
+            // console.log(timerId)
+        $('box').onmouseenter = function() {
+            clearInterval(timerId)
+        }
+
+        $('box').onmouseleave = function() {
+            timerId = setInterval(function() {
+                $('right').click()
+            }, 2000)
+        }
+    </script>
+
+
+</body>
+
+</html>

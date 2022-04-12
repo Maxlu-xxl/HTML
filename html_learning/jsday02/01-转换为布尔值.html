@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //除了这几个不能转换为布尔类型，其他都可以
+        var res = Boolean('')
+        console.log(res)
+        var res = Boolean(0)
+        console.log(res)
+        var res = Boolean(NaN)
+        console.log(res)
+        var res = Boolean(null)
+        console.log(res)
+        var res = Boolean(undefined)
+        console.log(res)
+            // console.log(0)
+            // console.log('123')
+        var res2 = Boolean('小白')
+        console.log(res2)
+        var res2 = Boolean(12)
+        console.log(res2)
+    </script>
+
+</body>
+
+</html>

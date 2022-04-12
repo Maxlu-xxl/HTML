@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(Math.PI)
+        console.log(Math.floor(5.99))
+        console.log(Math.ceil(5.9))
+        console.log(Math.round(5.5))
+        console.log(Math.max(1, 2222, 3, 45, 6))
+        var shuxue = {
+                name: 'shuxue',
+                max: function() {
+                    var max = arguments[0]
+                    for (var i = 0; i < arguments.length; i++) {
+                        if (max < arguments[i])
+                            max = arguments[i]
+                    }
+                }
+            }
+            // shuxue.max = [2, 1, 2222, 5, 7]
+            // console.log(shuxue.max)
+
+        // rgb(0-255,0-255,0-255)
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+
+        }
+    </script>
+
+</body>
+
+</html>

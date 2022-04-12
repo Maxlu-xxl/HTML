@@ -1,0 +1,107 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1383433",
+      "name": "配件",
+      "font_class": "peijian",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "3245423",
+      "name": "watch_nav_watch_os_l",
+      "font_class": "watch_nav_watch_os_l",
+      "unicode": "e50b",
+      "unicode_decimal": 58635
+    },
+    {
+      "icon_id": "4038196",
+      "name": "apple",
+      "font_class": "apple",
+      "unicode": "e57b",
+      "unicode_decimal": 58747
+    },
+    {
+      "icon_id": "4338064",
+      "name": "Apple Watch Edition",
+      "font_class": "AppleWatchEdition",
+      "unicode": "e733",
+      "unicode_decimal": 59187
+    },
+    {
+      "icon_id": "4338067",
+      "name": "Apple Watch Series",
+      "font_class": "AppleWatchSeries",
+      "unicode": "e734",
+      "unicode_decimal": 59188
+    },
+    {
+      "icon_id": "4338068",
+      "name": "Apple Watch Nike+",
+      "font_class": "AppleWatchNike",
+      "unicode": "e735",
+      "unicode_decimal": 59189
+    },
+    {
+      "icon_id": "5269220",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "7874876",
+      "name": "比较",
+      "font_class": "bijiao",
+      "unicode": "e70c",
+      "unicode_decimal": 59148
+    },
+    {
+      "icon_id": "9281811",
+      "name": "购物袋",
+      "font_class": "weidianicon-",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "18490065",
+      "name": "Apple Watch Hermès",
+      "font_class": "AppleWatchHerms",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "18490072",
+      "name": "Apple Watch 定制坊",
+      "font_class": "AppleWatchdingzhifang",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "18490075",
+      "name": "表带",
+      "font_class": "biaodai",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "18490078",
+      "name": "Apple Watch Series 6",
+      "font_class": "AppleWatchSeries6",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "21415410",
+      "name": "Airpods",
+      "font_class": "Airpods",
+      "unicode": "e8f7",
+      "unicode_decimal": 59639
+    }
+  ]
+}

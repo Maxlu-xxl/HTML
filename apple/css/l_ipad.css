@@ -1,0 +1,34 @@
+.l_ipad .bg {
+    width: 100%;
+    height: 640px;
+    display: block;
+    background-image: url(../images/ipad.jpg);
+    background-repeat: no-repeat;
+    background-size: 2200px 640px;
+    background-position: center center;
+    /* background-color: yellow; */
+    text-align: center;
+    /* iphone12的字下调，且不撑开盒子 */
+    box-sizing: border-box;
+    padding-top: 30px;
+    margin-top: 15px;
+}
+
+.l_ipad .bg .one {
+    width: 100%;
+    height: 144px;
+    font-size: 34px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    color: black;
+}
+
+.l_ipad .bg .two {
+    width: 100%;
+    height: 25px;
+    /* margin-top: 10px; */
+    /* background-color: pink; */
+    color: #06c;
+    text-align: center;
+    font-size: 18px;
+}

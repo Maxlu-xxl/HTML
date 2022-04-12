@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="#">
+        <div class="box">
+            <span id="a_one">进一步购买</span>
+            <span id="a_two">详情</span>
+        </div>
+    </a>
+
+
+
+    <!-- script写在body最下面 -->
+    <script>
+        var purchase = document.getElementById('a_one')
+        purchase.onclick = function() {
+            // alert(6666)
+
+            // this.target = '_blank'
+            // this.href = 'https://www.mi.com'
+
+            // console.log('https://www.apple.com.cn/mac')
+
+            // 实现了点击进一步购买，跳转到一个界面
+            window.location.href = "https://www.apple.com.cn/mac"
+
+        }
+    </script>
+
+</body>
+
+</html>

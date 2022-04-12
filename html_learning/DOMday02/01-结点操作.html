@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="添加" id="btn">
+    <input type="button" value="移除" id="btn1">
+
+    <ul id="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li id="last">5</li>
+    </ul>
+
+    <script>
+        function $(id) {
+            return document.getElementById(id)
+        }
+
+        // 添加
+        $('btn').onclick = function() {
+            var li = document.createElement('li')
+            li.innerText = '6'
+            $('box').appendChild(li)
+        }
+
+        // 移除
+        $('btn1').onclick = function() {
+            // alert(6666)
+            $('box').removeChild($('last'))
+        }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 不加参数,获取当前时间
+        // var a = new Date()
+        // var a = new Date('2000-10-20')
+        // console.log(a)
+
+
+        // var year = dObj.getFullYear()
+        // console.log(year)
+        var a = new Date()
+        console.log(a)
+        console.log(a.getFullYear())
+            // 月份输出有问题，需要加1
+        console.log(a.getMonth() + 1)
+        console.log(a.getDate())
+        console.log(a.getDay())
+
+        // 写出2021年07月28日 星期三 
+        function getMyDate() {
+            // 要定义一个arr数组，因为date.getDay()获取值为0-6（周日到周六）
+            var arr = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var date = new Date()
+            var str = date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDate() + '日' + arr[date.getDay()]
+            return str;
+        }
+        console.log(getMyDate())
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://www.baidu.com" id="mylink"> baidu</a>
+    <!-- <img src="美琪图片地址" alt="" id="meiqi"> -->
+
+    <script>
+        var mylink = document.getElementById('mylink')
+        mylink.onclick = function() {
+            this.href = 'https://www.mi.com'
+                // 这里写这句代码，相当于在a标签里面写target="_blank"
+            this.target = '_blank'
+        }
+
+        document.getElementById('meiqi').onclick = function() {
+            this.src = '杨超越图片地址'
+            this.title = '杨超越'
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 创建table
+        var table = document.createElement('table')
+        table.style.width = "400px";
+        table.style.height = "300px";
+        table.style.border = "1px solid #000"
+            // 把table加入到body中，不然不会显示
+        document.body.appendChild(table)
+
+        // for (var i = 0; i <= 6; i++) {
+        //     var tr = document.createElement('tr')
+        //     tr.style.width = "100px"
+        //     tr.style.height = "40px"
+        //         // tr.style.border = "1px solid #ff3040"
+        //     tr.style.backgroundColor = "pink"
+        //     table.appendChild(tr)
+        // }
+
+        // var s = {name: 'zs', subject: '语文', score: 90};
+        // 模拟数据
+        var datas = [{
+            name: 'zs',
+            subject: '语文',
+            score: 90
+        }, {
+            name: 'ls',
+            subject: '数学',
+            score: 80
+        }, {
+            name: 'ww',
+            subject: '英语',
+            score: 99
+        }, {
+            name: 'zl',
+            subject: '英语',
+            score: 100
+        }, {
+            name: 'xs',
+            subject: '英语',
+            score: 60
+        }, {
+            name: 'dc',
+            subject: '英语',
+            score: 70
+        }];
+
+        // 表头数据
+        var headDatas = ['姓名', '科目', '成绩', '操作'];
+
+        // 创建头部thead
+        var thead = document.createElement('thead')
+        for (var i = 0; i < headDatas.length; i++) {
+            var th = document.createElement('th')
+            th.innerText = headDatas[i]
+            thead.appendChild(th)
+        }
+        table.appendChild(thead)
+
+        // 创建表身tbody
+        var tbody = document.createElement('tbody')
+            // 向表身中添加数据
+        for (var i = 0; i < datas.length; i++) {
+            // 创建tr
+            var tr = document.createElement('tr')
+                // 新增代码，添加tr里面的数据,注意用for in循环
+            for (k in datas[i]) {
+                //创建td
+                var td = document.createElement('td')
+                td.style.textAlign = "center"
+                    // 向td中添加数据，只能用[],不能用.
+                td.innerText = datas[i][k]
+                    // 每创建一个td，就添加到tr中
+                tr.appendChild(td)
+            }
+            // 添加删除链接
+            var del = document.createElement('td')
+            del.style.textAlign = "center"
+            del.innerHTML = '<a href="javascript:;">删除</a>'
+            del.onclick = delclick
+            tr.appendChild(del)
+
+            // 每创建一个tr，就向tbody中添加tr
+            tbody.appendChild(tr)
+        }
+        // 整个tbody创建完成，加入到table中
+        table.appendChild(tbody)
+            // 整个table完成，将其添加到body中
+        document.body.appendChild(table)
+
+        function delclick() {
+            // 测试输出的是不是tr这一行
+            // console.log(this.parentNode)
+            tbody.removeChild(this.parentNode)
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

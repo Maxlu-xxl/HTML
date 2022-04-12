@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul li {
+            list-style: none;
+            width: 120px;
+            height: 60px;
+            border: 1px solid #000;
+            float: left;
+            cursor: pointer;
+        }
+        
+        .top {
+            /* 清除浮动 */
+            overflow: hidden;
+            margin: 80px 0 0 150px;
+        }
+        
+        .box {
+            width: 485px;
+            height: 300px;
+            margin: 10px 0 0 150px;
+            /* 父相 */
+            position: relative;
+        }
+        
+        .box img {
+            width: 485px;
+            height: 300px;
+            /* 子绝 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 图片隐藏起来 */
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <ul class="top">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div class="box">
+        <img src="images/f1.jpg" alt="">
+        <img src="images/f2.jpg" alt="">
+        <img src="images/f3.jpg" alt="">
+        <img src="images/f4.jpg" alt="">
+    </div>
+
+    <script>
+        var lis = document.getElementsByTagName('li')
+        var imgs = document.getElementsByTagName('img')
+            // 给每个li注册一个事件
+        for (var i = 0; i < lis.length; i++) {
+            // 重要，给img加索引
+            lis[i].setAttribute('index', i)
+            lis[i].onclick = function() {
+                // 每点击一个li，先把所有li背景色置为空
+                for (var j = 0; j < lis.length; j++) {
+                    lis[j].style.backgroundColor = ''
+                }
+                // li背景色都为空后，把this指向对象背景色变为红色
+                this.style.backgroundColor = '#ff3040'
+                    // 这里加个parseInt转换类型为整型
+                var index = parseInt(this.getAttribute('index'))
+                    // console.log(index)
+                    // 这里不这样写，因为图片显示也有排他
+                    // imgs[index].style.display = 'block'
+                for (var i = 0; i < imgs.length; i++) {
+                    imgs[i].style.display = 'none'
+                }
+                imgs[index].style.display = 'block'
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
